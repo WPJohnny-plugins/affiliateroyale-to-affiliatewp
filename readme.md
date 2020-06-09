@@ -8,7 +8,7 @@ INSTRUCTIONS:
 3. Run the script once. (https://yoursite.com/affiliateroyale-to-affiliatewp.php)
 4. It will show a success message, or throw a timeout error.
 5. If STEP 1 is successful, repeat for STEPS 2 and 3 but switching the comments.
-6. You should be done after three runs.
+6. You should be done after three successful runs.
 7. Please remove the file after use as it's a security vulnerability if left on your server.
 8. Look at your AffiliateWP info and see if it's correct. If yes, you can deactivate AffiliateRoyale. 
 
@@ -22,4 +22,4 @@ NOTES:
 DETAILS:
 - It worked fine for me and was able to get all the data I wanted on latest of version of Affiliate Royale and latest version of AffiliateWP at the date of JUNE 9, 2020. 
 - Affiliate name, commissions earned, etc. For more details, you can read the script code to see all that was migrated
-- I did think to make a plugin originally but the two plugins were so different, so I went this simple script route to save time.
+- We did think to make a plugin originally but the two plugins were so different, so we went this simple script route to save time.
