@@ -23,6 +23,7 @@ foreach ($results as $r) {
 
     $wpdb->insert($wpdb->prefix . 'affiliate_wp_affiliates', $data);
 }
+echo 'Affiliates list are successfully migrated. <br />';
 
 // Step 2: Migrate Visits Data
 $affiliate_ids = array();
@@ -44,6 +45,7 @@ foreach ($results as $r) {
 
     $wpdb->insert($wpdb->prefix . 'affiliate_wp_visits', $data);
 }
+echo 'Visits data are successfully migrated. <br />';
 
 // Step 3: Migrate Referrals Data
 $affiliate_ids = array();
@@ -114,6 +116,7 @@ foreach ($results as $r) {
     $where = array('visit_id' => $visit_results[0]->visit_id);
     $wpdb->update($wpdb->prefix . 'affiliate_wp_visits', $visit_data, $where);
 }
+echo 'Referrals data are successfully migrated. And Customers data were created. Visit data table were updated with referral ids.<br />';
 exit;
 
 
