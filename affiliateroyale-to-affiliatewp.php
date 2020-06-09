@@ -37,7 +37,7 @@ foreach ($results as $r) {
     $data      = array(
         'affiliate_id'          => $affiliate_ids[$r->affiliate_id],
         'referral_id' => '',
-        'url'      => 'https://members.expertboxing.com',
+        'url'      => 'https://yoursite.com',
         'referrer'        => $r->referrer,
         'ip'       => $r->ip,
         'date'          => $r->created_at,
