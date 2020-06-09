@@ -3,7 +3,7 @@ require( dirname( __FILE__ ) . '/wp-blog-header.php' );
 global $wpdb;
 
 // Step 1: Migrate Affiliates data
-/*$results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'users WHERE ID IN (SELECT user_id FROM ' . $wpdb->prefix . 'usermeta WHERE meta_key="wafp_is_affiliate" AND meta_value=1)');
+$results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'users WHERE ID IN (SELECT user_id FROM ' . $wpdb->prefix . 'usermeta WHERE meta_key="wafp_is_affiliate" AND meta_value=1)');
 foreach ($results as $r) {
     $user_id = $r->ID;
     // $rate      = $wpdb->get_var( $wpdb->prepare( "SELECT attr_value FROM {$wpdb->prefix}aff_affiliates_attributes WHERE affiliate_id = %d AND attr_key = 'referral.rate'", $affiliate->affiliate_id ) );
@@ -22,10 +22,10 @@ foreach ($results as $r) {
     );
 
     $wpdb->insert($wpdb->prefix . 'affiliate_wp_affiliates', $data);
-}*/
+}
 
 // Step 2: Migrate Visits Data
-/*$affiliate_ids = array();
+$affiliate_ids = array();
 $results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'affiliate_wp_affiliates');
 foreach ($results as $r) {
     $affiliate_ids[$r->user_id] = $r->affiliate_id;
@@ -43,7 +43,7 @@ foreach ($results as $r) {
     );
 
     $wpdb->insert($wpdb->prefix . 'affiliate_wp_visits', $data);
-}*/
+}
 
 // Step 3: Migrate Referrals Data
 $affiliate_ids = array();
